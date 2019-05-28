@@ -187,9 +187,6 @@ function pulse.new(args, style)
 	widg._sink = args.sink
 	table.insert(pulse.widgets, widg)
 
-	-- some unification between standard monitor gauge and special audio gauge
-	widg.set_mute = widg.set_mute or widg.set_alert
-
 	-- Set tooltip
 	--------------------------------------------------------------------------------
 	widg._tooltip = tooltip({ objects = { widg } }, style.tooltip)
